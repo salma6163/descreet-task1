@@ -12,28 +12,29 @@ namespace problem
     {
         static void Main()
         {
-            Console.WriteLine("please enter the first number");
-            int n1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("please enter the second number");
-            int n2 = int.Parse(Console.ReadLine());
-
-            for (n1 = 5; n1 <= n2; n1 += 2)
+            
+            Console.WriteLine("enter first  number");
+            int n1 =int.Parse(Console.ReadLine());
+            Console.WriteLine("enter second number");
+            int n2 =int.Parse(Console.ReadLine());
+            
+            Console.WriteLine("perfect numbers are");
+            for(int x=n1;x<n2; x++)
             {
-                do
+                int sum = 0;
+                for (int z = 1; z < x; z++)
                 {
+                    if (x % z == 0)
+                        sum = sum + z;
+                }
 
-                    Console.WriteLine("prime number is "+n1);
-                    n1 += 2;
-                } while (n1 <= n2 && (n1 % 3 == 1));
+                if (sum == x)
+                {
+                    Console.WriteLine(x);
+                }
             }
-       
-            
-            
-               
-            
-        
-            
+      
         }
-       
     }
 }
+
